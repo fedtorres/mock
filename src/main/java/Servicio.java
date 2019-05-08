@@ -44,18 +44,18 @@ public class Servicio {
 
         consulta("GET", "/users/.*", 200,
                 "application/json; charset=utf-8",
-                gson.toJson(user), 1000);
+                gson.toJson(user), 10);
 
         consulta("GET", "/sites/.*/categories", 200,
                 "application/json; charset=utf-8",
-                gson.toJson(categories), 1000);
+                gson.toJson(categories), 10);
 
-        consulta("GET", "/countries/.*", 200,
+        consulta("GET", "/classified_locations/countries/.*", 200,
                 "application/json; charset=utf-8",
-                gson.toJson(country), 1000);
+                gson.toJson(country), 10);
 
         consulta("GET", "/currencies/.*", 200,
                 "application/json; charset=utf-8",
-                gson.toJson(currency), 1000);
+                gson.toJson(currency), 10);
     }
 }
